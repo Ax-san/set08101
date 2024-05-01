@@ -1,16 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarot Website</title>
-    <link rel="stylesheet" href="Fortune Story/HTMLFiles/CSS/Style.css">
+  <title>Fortune Story | Online Tarot Reading</title>
+  <link rel="stylesheet" href="Fortune Story/HTML Files/CSS/Style.css" type="text/css"> 
 </head>
-<body>
-    <!-- Your content, including links -->
-    <a href="Fortune Story/HTMLFiles/Daily Readings.html">Link to reading.html</a>
 
-    <!-- Your JavaScript files -->
-    <script src="Script.js"></script>
+<body>
+  <audio id="hover-sound">
+    <source src="Sound/Card Sound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<!-- Logo Header -->
+  <header>
+    <div class="logo">
+      <img src="photo gallery/Logo.png" alt="Fortune Story Logo Image"/>
+    </div>
+  </header>
+
+<!-- Background Video -->
+<div class="video-container">
+    <video autoplay muted loop id="background-video">
+      <source src="photo gallery/background-video.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div> <!-- Black overlay -->
+</div>
+
+<!-- Content -->
+<div class="content">
+  <div class="intro-text">
+    <p>Are You Ready To Find Out Your Today's Fortune?</p>
+  </div>
+  <div class="prompt-textbox">
+    <p>Take a deep breath...</p>
+  </div>
+  <div class="prompt-text">
+    <p>Select 1 Card From The Deck</p>
+  </div>
+
+
+  <div class="cards-container" id="cards-container"></div>
+  <div class="card-meaning-popup" id="card-meaning-popup">
+    <div class="popup-content">
+      <img class="chosen-card-image" src="" alt="Chosen Card Image">
+      <div class="card-details">
+        <h2 class="header"></h2>
+        <p class="meaning"></p>
+        <button class="start-again" id="start-again" onclick="StartAgain()">Start Again</button>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+<script src="Fortune Story/HTML Files/JS/Script.js"></script>
+
 </body>
 </html>
